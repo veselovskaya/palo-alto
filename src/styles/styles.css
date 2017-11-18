@@ -1,0 +1,119 @@
+body {
+  font-family: Lato-Regular, sans-serif;
+  font-size: 20px;
+}
+
+header{
+	width: 1400px;
+	height: 187px;
+	margin: auto;
+	background-color: #f7f9fc;
+}
+
+.span__header{
+	font-family: Lato-BoldItalic;
+	font-size: 42px;
+	color: #333333;
+	margin-left: 223px;
+	line-height: 187px;
+}
+
+.background{
+	width: 1400px;
+	height: 1126px;
+	margin: auto;
+	background-color: #f7f9fc;
+}
+
+.profile{
+	width: 952px;
+	height: 1017px;
+	background-color: #ffffff;
+	margin-left: 223px;
+	box-shadow: 0 0 40px #ebedf0;
+}
+
+.profile__header{
+	height: 150px;
+	font-family: Lato-Bold;
+	font-size: 40px;
+	color: #333333;
+	margin-left: 98px;
+	line-height: 150px;
+}
+
+.profile__profile-form{
+	width: 364px;
+	margin-left: 294px;
+}
+
+.profile-form__input{
+	width: 364px;
+	height: 56px;
+	margin-bottom: 30px;
+	background-color: #f7f9fc;
+	border: 0;
+	font-size: 20px;
+	padding-left: 32px;
+}
+
+.profile-form__label{
+	font-family: Lato-Regular;
+	font-size: 20px;
+	padding-bottom: 14px;
+	margin-top: 0;
+}
+
+input[type='date']{
+	background-image: url(../images/icon.png);
+	background-position: 350px 13px;
+	background-repeat: no-repeat;
+}
+
+.profile-form__submit{
+	font-family: Lato-Bold;
+	text-transform: uppercase;
+	margin-left: 37px;
+	margin-top: 30px;
+	font-size: 20px;
+	font-weight: 600;
+	color: #5c6bc0;
+	border: 0;
+	background-color: #ffffff;
+}
+
+button:hover{
+	outline: none !important;
+    border: 1px solid #f1f1f1;
+}
+
+button:focus{
+	outline: none !important;
+    border: 1px solid #7d89cd;
+}
+
+input:focus{
+	outline: none !important;
+    border: 1px solid #7d89cd;
+}
+
+
+.profile-form__divider{
+	width: 755px;
+  	height: 2px;
+  	background: #eeeeee;
+  	margin-left: 98px;
+  	margin-bottom: 44px;
+}
+
+footer{
+	width: 1400px;
+	height: 160px;
+	margin: auto;
+	background-color: #5c6bc0;
+	font-family: Lato-BoldItalic;
+	font-size: 36px;
+	color: #4a569a;
+	text-align: center;
+	line-height: 160px;
+}
