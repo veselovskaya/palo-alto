@@ -1,0 +1,93 @@
+$bg-color: #f7f9fc;
+$font-bold: Lato-Bold;
+$font-regular: Lato-Regular;
+
+.background{
+	width: 1400px;
+	height: 1126px;
+	margin: auto;
+	background-color: $bg-color;
+}
+
+.profile{
+	width: 952px;
+	height: 1017px;
+	background-color: #ffffff;
+	margin-left: 223px;
+	box-shadow: 0 0 40px #ebedf0;
+
+	&__header{
+	height: 150px;
+	font-family: $font-bold;
+	font-size: 40px;
+	color: #333333;
+	margin-left: 98px;
+	line-height: 150px;
+	}	
+
+	&__profile-form{
+	width: 364px;
+	margin-left: 294px;
+	}
+}
+
+.profile-form{
+	&__input{
+	width: 364px;
+	height: 56px;
+	margin-bottom: 30px;
+	background-color: $bg-color;
+	border: 0;
+	font-size: 20px;
+	padding-left: 32px;
+	}
+
+	&__label{
+	font-family: $font-regular;
+	font-size: 20px;
+	padding-bottom: 14px;
+	margin-top: 0;
+	}
+
+	&__submit{
+	font-family: $font-bold;
+	text-transform: uppercase;
+	margin-left: 37px;
+	margin-top: 30px;
+	font-size: 20px;
+	font-weight: 600;
+	color: #5c6bc0;
+	border: 0;
+	background-color: #ffffff;
+	}
+
+	&__divider{
+	width: 755px;
+  	height: 2px;
+  	background: #eeeeee;
+  	margin-left: 98px;
+  	margin-bottom: 44px;
+	}
+}
+
+input[type='date']{
+	background-image: url(../images/icon.png);
+	background-position: 350px 13px;
+	background-repeat: no-repeat;
+}
+
+button:hover{
+	outline: none !important;
+    border: 1px solid #f1f1f1;
+}
+
+button:focus{
+	outline: none !important;
+    border: 1px solid #7d89cd;
+}
+
+input:focus{
+	outline: none !important;
+    border: 1px solid #7d89cd;
+}
+

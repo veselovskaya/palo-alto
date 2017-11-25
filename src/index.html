@@ -1,80 +1,68 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<link rel="stylesheet" href="./styles/reset.css">
-	<link rel="stylesheet" href="./styles/styles.css">
-	<link rel="stylesheet" href="./styles/fonts.css">
-	<title>Palo Alto</title>
-</head>
-<body>
-	<header>
-		<span class = "span__header">
-			Palo Alto
-		</span>
-	</header>
-	<main class = "background">
-		<section class="profile">
-			<div class = "profile__header">
-				Profile
-			</div>
-			<div class = "profile-form__divider"></div>
-			<div class="profile__profile-form">
-				
-				<div class= "profile__first-name">
-					<form>
-  						<label class = "profile-form__label" for="1">First Name</label>
-  						<br><br>
-  						<input class = "profile-form__input" type="text" id="1" name="fname">
-					</form>
-				</div>
-				<div class= "profile__last-name">
-					<form>
-  						<label class = "profile-form__label" for="2">Last Name</label>
-  						<br><br>
-  						<input class = "profile-form__input" type="text" id="2" name="lname">
-					</form>
-				</div>
-				<div class= "profile__e-mail">
-					<form>
-  						<label class = "profile-form__label" for="3">E-mail</label>
-  						<br><br>
-  						<input class = "profile-form__input" type="email" id="3" name="email">
-					</form>
-				</div>
-				<div class= "profile__phone">
-					<form>
-  						<label class = "profile-form__label" for="4">Phone</label>
-  						<br><br>
-  						<input class = "profile-form__input" type="tel" id="4" name="phone">
-					</form>
-				</div>
-				<div class= "profile__date-of-birth">
-					<label class = "profile-form__label" for="5">Date of Birth</label>
-					<br><br>
-					<input class = "profile-form__input profile-form__input-date" id="5" type="date" name="date-of-birth">
+{% extends "layout.html" %}
 
-				</div>
-				<div class= "profile__sex">
-					<form>
-						<label class = "profile-form__label" for="6">Sex</label>
+{% block main %}
+<main class = "background">
+	<section class="profile">
+		<div class = "profile__header">
+			Profile
+		</div>
+		<div class = "profile-form__divider"></div>
+		<div class="profile__profile-form">
+			
+			<div class= "profile__first-name">
+				<form>
+						<label class = "profile-form__label" for="1">First Name</label>
 						<br><br>
-  						<input id="6" type="radio" name="gender" value="male" checked> Male
-  						<br>
-  						<input type="radio" name="gender" value="female"> Female
-					</form>
-				</div>
-				<div class= "profile__submit">
-					<form>
-  						<button class="profile-form__submit" type="submit">submit
-  						</button>
-
-					</form>
-				</div>
+						<input class = "profile-form__input" type="text" id="1" name="fname">
+				</form>
 			</div>
+			<div class= "profile__last-name">
+				<form>
+						<label class = "profile-form__label" for="2">Last Name</label>
+						<br><br>
+						<input class = "profile-form__input" type="text" id="2" name="lname">
+				</form>
+			</div>
+			<div class= "profile__e-mail">
+				<form>
+						<label class = "profile-form__label" for="3">E-mail</label>
+						<br><br>
+						<input class = "profile-form__input" type="email" id="3" name="email">
+				</form>
+			</div>
+			<div class= "profile__phone">
+				<form>
+						<label class = "profile-form__label" for="4">Phone</label>
+						<br><br>
+						<input class = "profile-form__input" type="tel" id="4" name="phone">
+				</form>
+			</div>
+			<div class= "profile__date-of-birth">
+				<label class = "profile-form__label" for="5">Date of Birth</label>
+				<br><br>
+				<input class = "profile-form__input profile-form__input-date" id="5" type="date" name="date-of-birth">
 
-		</section>
-	</main>
-	<footer>Palo Alto</footer>
-</body>
-</html>
+			</div>
+			<div class= "profile__sex">
+				<form>
+					<label class = "profile-form__label">Sex</label>
+					<br><br>
+						<label class = "profile-form__label-radio" for="6"></>
+						<input class="profile-form__input-radio" id="6" type="radio" name="gender" > Male
+						<br><br>
+						<label class = "profile-form__label-radio" for="7"></label>
+						<input class="profile-form__input-radio" id="7" type="radio" name="gender" > Female
+				</form>
+			</div>
+			<div class= "profile__submit">
+				<form>
+						<button class="profile-form__submit" type="submit">submit
+						</button>
+
+				</form>
+			</div>
+		</div>
+
+	</section>
+</main>
+{% endblock %}
