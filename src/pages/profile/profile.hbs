@@ -1,0 +1,49 @@
+{{#> layout/base }}
+
+{{#*inline "main-block"}}
+<main class = "container">
+	<section class="profile">
+		<div class = "profile__header">
+			Profile
+		</div>
+		<div class = "profile-form__divider"></div>
+		<div class="profile__profile-form">	
+			<form>
+				<div class= "profile__first-name">
+					<label class = "profile-form__label" for="1">First Name</label>
+					<input class = "profile-form__input" type="text" id="1" name="fname" placeholder="John">
+				</div>
+				<div class= "profile__last-name">
+					<label class = "profile-form__label" for="2">Last Name</label>
+					<input class = "profile-form__input" type="text" id="2" name="lname" placeholder="Doe">
+				</div>
+				<div class= "profile__e-mail">
+					<label class = "profile-form__label" for="3">E-mail</label>
+					<input class = "profile-form__input" type="text" id="3" name="email" placeholder="johndoe@domain.com">
+				</div>
+				<div class= "profile__phone">
+					<label class = "profile-form__label" for="4">Phone</label>
+					<input class = "profile-form__input" type="text" id="4" name="phone" placeholder="+_(___)___-__-__">
+				</div>
+				<div class= "profile__date-of-birth">
+					<label class = "profile-form__label" for="5">Date of Birth</label>
+					<input class = "profile-form__input profile-form__input-date" id="5" type="text" name="date-of-birth" placeholder="DD/MM/YYYY">
+				</div>
+				<div class= "profile__sex">
+					<label class = "profile-form__label">Sex</label>	
+					<input class="profile-form__input-radio" id="6" type="radio" name="gender"> 
+					<label class = "profile-form__label-radio" for="6">Male</label>
+					<input class="profile-form__input-radio" id="7" type="radio" name="gender"> 
+					<label class = "profile-form__label-radio" for="7">Female</label>
+				</div>
+				<div class= "profile__submit">
+					<button class="profile-form__submit" type="submit">submit
+					</button>
+				</div>
+			</form>
+		</div>
+	</section>
+</main>
+{{/inline}}
+
+{{/layout/base }}

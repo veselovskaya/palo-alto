@@ -2,18 +2,17 @@ $bg-color: #f7f9fc;
 $font-bold: Lato-Bold;
 $font-regular: Lato-Regular;
 
-.background{
-	width: 1400px;
-	height: 1126px;
-	margin: auto;
+.container{
+	width: auto;
+	/*height: 1126px;*/
 	background-color: $bg-color;
 }
 
 .profile{
 	width: 952px;
-	height: 1017px;
+	/*height: 1017px;*/
 	background-color: #ffffff;
-	margin-left: 223px;
+	margin: 0 auto 100px;
 	box-shadow: 0 0 40px #ebedf0;
 
 	&__header{
@@ -27,53 +26,74 @@ $font-regular: Lato-Regular;
 
 	&__profile-form{
 	width: 364px;
-	margin-left: 294px;
+	margin: 0 auto;
 	}
 }
 
 .profile-form{
 	&__input{
-	width: 364px;
-	height: 56px;
+	width: 330px;
+	height: 54px;
 	margin-bottom: 30px;
 	background-color: $bg-color;
-	border: 0;
+	border: 1px solid #f7f9fc;
 	font-size: 20px;
 	padding-left: 32px;
 	}
 
 	&__label{
+	display: block;
 	font-family: $font-regular;
 	font-size: 20px;
-	padding-bottom: 14px;
+	margin-bottom: 15px;
 	margin-top: 0;
+
 	}
 
 	&__submit{
+	inline: block;
+	width: 189px;
+	height: 53px;
 	font-family: $font-bold;
 	text-transform: uppercase;
-	margin-left: 37px;
 	margin-top: 30px;
 	font-size: 20px;
-	font-weight: 600;
 	color: #5c6bc0;
-	border: 0;
+	border: 1px solid #ffffff;
 	background-color: #ffffff;
+	margin-bottom: 68px;
 	}
 
 	&__divider{
-	width: 755px;
   	height: 2px;
   	background: #eeeeee;
-  	margin-left: 98px;
-  	margin-bottom: 44px;
+  	margin: 0 98px 44px 98px;
+	}
+
+	&__label-radio{
+	display: block;
+	margin-bottom: 17px;
+	font-family: $font-regular;
+	font-size: 20px;
+	background: url(../images/radio.png) left 3px no-repeat;
+	min-height: 25px;
+	padding-left: 25px;
+	}
+
+	&__input-date {
+	background-image: url(../images/icon.png);
+	background-position: 318px 13px;
+	background-repeat: no-repeat;
 	}
 }
 
-input[type='date']{
-	background-image: url(../images/icon.png);
-	background-position: 350px 13px;
-	background-repeat: no-repeat;
+
+input[type='radio']{
+	display: none;
+}
+
+input[type='radio']:checked + label{
+	background: url(../images/radio-checked.png) left 3px no-repeat;
 }
 
 button:hover{
@@ -90,4 +110,5 @@ input:focus{
 	outline: none !important;
     border: 1px solid #7d89cd;
 }
+
 

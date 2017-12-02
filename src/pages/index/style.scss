@@ -1,0 +1,140 @@
+$bg-color: #f7f9fc;
+$font-bold: Lato-Bold;
+$font-regular: Lato-Regular;
+$font-italic: Lato-Italic;
+
+.container{
+	width: auto;
+	/*height: 1126px;*/
+	background-color: $bg-color;
+}
+
+.post{
+	width: 952px;
+	background-color: #ffffff;
+	margin: 0 auto 50px;
+	box-shadow: 0 0 40px #ebedf0;
+
+	&__header{
+	height: 225px auto;
+	font-family: $font-bold;
+	padding-left: 97px;
+	padding-right: 97px;
+	position: relative;
+	}	
+
+	&__divider{
+  	height: 2px;
+  	background: #eeeeee;
+  	margin: 0 98px 27px 98px;
+	}
+
+	&__header-category{
+	height: 32px;
+	display: inline-block;
+	position: absolute;
+	top: 20px;
+	right: -20px;
+	padding-left: 12px;
+	padding-right: 12px;
+	line-height: 32px;
+	background-color: #5c6bc0;
+	font-size: 14px;
+	color: #ffffff;
+	}
+
+	&__header-header{
+	font-size: 40px;
+	color: #000000;
+	
+	}
+
+	&__header-date{
+	font-size: 14px;
+	color: #bdbdbd;
+	padding-top: 58px;
+	}
+
+	&__text{
+	padding: 0 84px 40px 97px;
+	font-family: $font-regular;
+	font-size: 17px;
+	color: #333333;
+	line-height: 30px
+	}
+
+	&__submit{
+	inline: block;
+	width: 189px;
+	height: 53px;
+	font-family: $font-bold;
+	text-transform: uppercase;
+	font-size: 20px;
+	color: #5c6bc0;
+	border: 1px solid #ffffff;
+	background-color: #ffffff;
+	margin-left: 64px;
+	margin-bottom: 60px;
+	float: left;
+	}
+
+	&__bottom-container{
+	display: inline-block;
+	width: 100%;
+	}
+
+	&__tags{
+	float: right;
+	margin-right: 80px;
+	margin-top: 15px;
+	font-size: 15px;
+	font-family: $font-regular;
+	}
+
+	&__images{
+	max-width:100%
+	}
+}
+
+a{
+	color: #b2b2b2;
+	text-decoration: none;
+}
+
+a:hover{
+	color: #6674c4;
+	text-decoration: underline;
+}
+
+a:active{
+	color: #6674c4;
+	text-decoration: none;
+}
+
+
+.last-post{
+	margin: 0 auto 100px;
+
+	&__text{
+	padding: 0 70px 0 97px;
+	font-family: $font-regular;
+	font-size: 17px;
+	color: #333333;
+	line-height: 30px
+	}
+
+	&__text-italics{
+	font-family: $font-italic;
+	font-size: 25px;
+	color: #7f7f7f;
+	line-height: 38px
+	}
+
+	&__header-date{
+	padding-top: 38px;
+	}
+
+	&__header-category{
+	top: 6px;
+	}
+}

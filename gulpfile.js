@@ -1,19 +1,29 @@
 var gulp = require('gulp');
-var nunjucks = require('gulp-nunjucks');
-var concat = require('gulp-concat');
+var handlebars = require('gulp-compile-handlebars');
+var rename = require('gulp-rename');
 var sass = require('gulp-sass');
+var cssmin = require('gulp-cssmin');
+var sourcemaps = require('gulp-sourcemaps');
+var autoprefixer = require('gulp-autoprefixer');
 var browserSync = require('browser-sync').create();
 
 var path = {
-    css:  'src/styles/*.scss',
-    html: 'src/*.html',
+    css:  './src/*.scss',
+    html: {
+        pages: './src/pages/**/*.hbs',
+        partials: './src/partials/'
+    },
     images: 'src/images/*',
     fonts: 'src/fonts/*',
     dist: {
-      css:  'dist/styles/',
+      css:  './dist/',
       fonts: 'dist/fonts/',
       images: 'dist/images/',
-      html: 'dist/'
+      html: './dist/'
+    },
+    watch: {
+        css: './src/**/*.scss',
+        html: './src/**/*.hbs'
     }
 };
 
@@ -21,8 +31,11 @@ gulp.task('default', ['build', 'serve', 'watch']);
 
 gulp.task('css', function () {
   return gulp.src(path.css)
+    .pipe(sourcemaps.init())
+    .pipe(autoprefixer())
     .pipe(sass().on('error', sass.logError))
-    .pipe(concat('style.css'))
+    .pipe(cssmin())
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(path.dist.css));
 });
 
@@ -37,18 +50,25 @@ gulp.task('images', function () {
 });
 
 gulp.task('html', function () {
-  return gulp.src(path.html)
-    .pipe(nunjucks.compile())
-    .pipe(gulp.dest(path.dist.html));
+    return gulp.src(path.html.pages)
+        .pipe(handlebars({}, {
+            ignorePartials: true,
+            batch: [path.html.partials]
+        }))
+        .pipe(rename({
+            dirname: '.',
+            extname: '.html'
+        }))
+        .pipe(gulp.dest(path.dist.html));
 });
 
 gulp.task('build', ['html', 'css', 'images', 'fonts']);
 
 gulp.task('watch', function () {
-  gulp.watch(path.css, ['css']);
+  gulp.watch(path.watch.css, ['css']);
   gulp.watch(path.fonts, ['fonts']);
   gulp.watch(path.images, ['images']);
-  gulp.watch(path.html, ['html']);
+  gulp.watch(path.watch.html, ['html']);
 });
 
 gulp.task('serve', ['watch'], function() {

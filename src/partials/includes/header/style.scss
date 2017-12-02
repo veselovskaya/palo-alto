@@ -1,0 +1,43 @@
+$font-italic: Lato-BoldItalic;
+$bg-color: #f7f9fc;
+$font-bold: Lato-Bold;
+
+.header{
+	width: auto;
+	height: 187px;
+	background-color: $bg-color;
+
+	&__container{
+	font-family: $font-italic;
+	font-size: 42px;
+	color: #333333;
+	margin: 0 auto;
+	width: 952px;
+	line-height: 187px;
+	}
+
+	&__{
+	float: left;
+	}
+	
+	&__menu{
+	list-style-type: none;
+	float: right;	
+	margin-top: -7px;
+		li{
+		display: inline;
+		margin-right: 35px;
+			a{
+			font-size: 16px;
+			font-family: $font-bold;
+			text-transform: uppercase;
+			color: #333333;
+			}
+		}
+
+		li:last-child{
+		margin-right: 0;
+		}
+	}
+
+}
