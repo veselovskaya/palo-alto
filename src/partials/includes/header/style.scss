@@ -16,8 +16,8 @@ $font-bold: Lato-Bold;
 	line-height: 187px;
 	}
 
-	&__{
-	float: left;
+	&__mobile-menu {
+		display: none;
 	}
 	
 	&__menu{
@@ -39,5 +39,45 @@ $font-bold: Lato-Bold;
 		margin-right: 0;
 		}
 	}
+
+}
+
+
+@media (max-width: 768px) {
+
+	.header {
+		width: 768px;
+		&__container {
+			width: 700px;
+		}
+
+	}
+
+
+}
+
+@media (max-width: 320px) {
+
+	.header {
+		width: 320px;
+		&__container {
+			width: 280px;
+			text-align: right;
+		}
+
+		&__menu {
+			display: none;
+		}
+
+		&__logo {
+			display: block;
+			float: left;
+		}
+
+		&__mobile-menu {
+			display: inline;
+		}
+	}
+
 
 }

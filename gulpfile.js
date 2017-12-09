@@ -13,12 +13,13 @@ var path = {
         pages: './src/pages/**/*.hbs',
         partials: './src/partials/'
     },
-    images: 'src/images/*',
+    favicons: 'src/favicons/*',
+    images: 'src/**/images/*',
     fonts: 'src/fonts/*',
     dist: {
       css:  './dist/',
       fonts: 'dist/fonts/',
-      images: 'dist/images/',
+      images: './dist/',
       html: './dist/'
     },
     watch: {
@@ -45,7 +46,7 @@ gulp.task('fonts', function () {
 });
 
 gulp.task('images', function () {
-  return gulp.src(path.images)
+  return gulp.src([path.images, path.favicons])
   .pipe(gulp.dest(path.dist.images));
 });
 

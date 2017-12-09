@@ -51,7 +51,7 @@ $font-regular: Lato-Regular;
 	}
 
 	&__submit{
-	inline: block;
+	display: inline-block;
 	width: 189px;
 	height: 53px;
 	font-family: $font-bold;
@@ -75,13 +75,13 @@ $font-regular: Lato-Regular;
 	margin-bottom: 17px;
 	font-family: $font-regular;
 	font-size: 20px;
-	background: url(../images/radio.png) left 3px no-repeat;
+	background: url(/pages/profile/images/radio.png) left 3px no-repeat;
 	min-height: 25px;
 	padding-left: 25px;
 	}
 
 	&__input-date {
-	background-image: url(../images/icon.png);
+	background-image: url(/pages/profile/images/icon.png);
 	background-position: 318px 13px;
 	background-repeat: no-repeat;
 	}
@@ -93,7 +93,7 @@ input[type='radio']{
 }
 
 input[type='radio']:checked + label{
-	background: url(../images/radio-checked.png) left 3px no-repeat;
+	background: url(/pages/profile/images/radio-checked.png) left 3px no-repeat;
 }
 
 button:hover{
@@ -103,12 +103,133 @@ button:hover{
 
 button:focus{
 	outline: none !important;
+    border: 1px solid #f1f1f1;
+}
+
+button:active{
+	outline: none !important;
     border: 1px solid #7d89cd;
 }
 
 input:focus{
 	outline: none !important;
     border: 1px solid #7d89cd;
+}
+
+@media only screen and (min-device-pixel-ratio: 1.5) {
+	.profile-form {
+	  	&__input-date {
+			background-image: url(/pages/profile/images/icon@2x.png);
+		}
+
+		&__label-radio{
+			background-image: url(/pages/profile/images/radio@2x.png);
+		}
+	}
+
+	input[type='radio']:checked + label{
+		background-image: url(/pages/profile/images/radio-checked@2x.png);
+	}
+
+}
+
+
+@media (max-width: 768px) {
+	.profile {
+		width: 700px;
+		margin-bottom: 54px;
+		
+		&__header {
+			/*display: block;*/
+			/*margin: 0 auto;*/
+			margin-left: 75px;
+			height: 100px;
+			font-size: 36px;
+			line-height: 100px;
+		}
+
+		&__profile-form {
+			width: 300px;
+		}
+
+		&__submit {
+			text-align: center;
+		}
+	}
+
+	.profile-form {
+
+		&__divider {
+			margin: 0 auto 40px auto;
+    		width: 550px;
+		}
+
+		&__input {
+			width: 268px;
+			padding-left: 32px;
+		}
+
+		&__submit {
+			margin-top: 10px;
+			margin-bottom: 20px;
+		}
+
+		&__input-date {
+
+			background-position: 256px 13px;
+
+		}
+	}
+}
+
+@media (max-width: 320px) {
+	.profile {
+		width: 280px;
+		margin-bottom: 54px;
+		&__header {
+			display: block;
+			margin: 0 auto;
+			width: 50%;
+			height: 80px;
+			text-align: center;
+			font-size: 36px;
+			line-height: 80px;
+		}
+
+		&__profile-form {
+			width: 232px;
+			padding-left: 24px;
+			padding-right: 24px;
+		}
+
+		&__submit {
+			text-align: center;
+		}
+	}
+
+	.profile-form {
+
+		&__divider {
+			margin: 0 auto 20px auto;
+    		width: 229px;
+		}
+
+		&__input {
+			width: 216px;
+			padding-left: 18px;
+		}
+
+		&__submit {
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+
+		&__input-date {
+
+			background-position: 190px 13px;
+
+		}
+	}
 }
 
 
