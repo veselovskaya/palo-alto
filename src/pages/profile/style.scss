@@ -1,16 +1,6 @@
-$bg-color: #f7f9fc;
-$font-bold: Lato-Bold;
-$font-regular: Lato-Regular;
-
-.container{
-	width: auto;
-	/*height: 1126px;*/
-	background-color: $bg-color;
-}
 
 .profile{
 	width: 952px;
-	/*height: 1017px;*/
 	background-color: #ffffff;
 	margin: 0 auto 100px;
 	box-shadow: 0 0 40px #ebedf0;
@@ -94,26 +84,6 @@ input[type='radio']{
 
 input[type='radio']:checked + label{
 	background: url(/pages/profile/images/radio-checked.png) left 3px no-repeat;
-}
-
-button:hover{
-	outline: none !important;
-    border: 1px solid #f1f1f1;
-}
-
-button:focus{
-	outline: none !important;
-    border: 1px solid #f1f1f1;
-}
-
-button:active{
-	outline: none !important;
-    border: 1px solid #7d89cd;
-}
-
-input:focus{
-	outline: none !important;
-    border: 1px solid #7d89cd;
 }
 
 @media only screen and (min-device-pixel-ratio: 1.5) {

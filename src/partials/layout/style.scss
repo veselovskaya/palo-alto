@@ -1,7 +1,58 @@
 $bg-color: #f7f9fc;
+$footer-background: #5c6bc0;
+$font-bold: Lato-Bold;
+$font-italic: Lato-BoldItalic;
+$font-regular: Lato-Regular;
+
 
 body {
-  font-family: Lato-Regular, sans-serif;
+  font-family: $font-regular, sans-serif;
   font-size: 20px;
   background-color: $bg-color;
+}
+
+.container{
+	width: auto;
+	background-color: $bg-color;
+	min-width: 1020px;
+}
+
+button:hover{
+	outline: none !important;
+    border: 1px solid #f1f1f1;
+}
+
+button:focus{
+	outline: none !important;
+    border: 1px solid #f1f1f1;
+}
+
+button:active{
+	outline: none !important;
+    border: 1px solid #7d89cd;
+}
+
+input:focus{
+	outline: none !important;
+    border: 1px solid #7d89cd;
+}
+
+@media (max-width: 768px) {
+
+	.container{
+		width: 768px;
+		min-width: auto
+
+	}
+
+}
+
+@media (max-width: 320px) {
+
+	.container{
+		width: 320px;
+		min-width: auto
+
+	}
+
 }

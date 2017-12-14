@@ -1,14 +1,11 @@
-$font-italic: Lato-BoldItalic;
-$bg-color: #f7f9fc;
-$font-bold: Lato-Bold;
-
 .header{
 	width: auto;
 	height: 187px;
 	background-color: $bg-color;
+	min-width: 1020px;
 
 	&__container{
-	font-family: $font-italic;
+	font-family: $font-bold;
 	font-size: 42px;
 	color: #333333;
 	margin: 0 auto;
@@ -29,7 +26,6 @@ $font-bold: Lato-Bold;
 		margin-right: 35px;
 			a{
 			font-size: 16px;
-			font-family: $font-bold;
 			text-transform: uppercase;
 			color: #333333;
 			}
@@ -47,6 +43,7 @@ $font-bold: Lato-Bold;
 
 	.header {
 		width: 768px;
+		min-width: auto;
 		&__container {
 			width: 700px;
 		}
@@ -60,6 +57,7 @@ $font-bold: Lato-Bold;
 
 	.header {
 		width: 320px;
+		min-width: auto;
 		&__container {
 			width: 280px;
 			text-align: right;
@@ -72,6 +70,9 @@ $font-bold: Lato-Bold;
 		&__logo {
 			display: block;
 			float: left;
+			
+
+
 		}
 
 		&__mobile-menu {

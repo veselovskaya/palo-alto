@@ -1,13 +1,3 @@
-$bg-color: #f7f9fc;
-$font-bold: Lato-Bold;
-$font-regular: Lato-Regular;
-$font-italic: Lato-Italic;
-
-.container{
-	width: auto;
-	/*height: 1126px;*/
-	background-color: $bg-color;
-}
 
 .post{
 	width: 952px;
@@ -53,6 +43,7 @@ $font-italic: Lato-Italic;
 	font-size: 14px;
 	color: #bdbdbd;
 	padding-top: 58px;
+	margin: 0;
 	}
 
 	&__text{
@@ -146,10 +137,6 @@ a:active{
 
 @media (max-width: 768px) {
 
-	.container {
-		width: 768px;
-	}
-
   .post, .last-post {
     width: 700px;
 	margin-bottom: 20px;
@@ -231,10 +218,6 @@ a:active{
 
 
 @media (max-width: 320px) {
-
-	.container {
-		width: 320px;
-	}
 
   .post, .last-post {
     width: 280px;
