@@ -3,7 +3,7 @@
 	width: auto;
 	background-color: $footer-background;
 	text-align: center;
-	min-width: 1020px;
+	min-width: 768px;
 
 	&__logo-footer{
 	padding: 66px 0 66px 0;
@@ -107,8 +107,8 @@
 @media (max-width: 768px) {
 
 	.footer {
-		width: 768px;
-		min-width: auto;
+		max-width: 768px;
+		min-width: 440px;
 		&__logo-footer {
 			padding-top: 55px;
 			padding-bottom: 44px;

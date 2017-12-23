@@ -1,6 +1,6 @@
 
 .post{
-	width: 952px;
+	max-width: 952px;
 	background-color: #ffffff;
 	margin: 0 auto 50px;
 	box-shadow: 0 0 40px #ebedf0;
@@ -138,7 +138,9 @@ a:active{
 @media (max-width: 768px) {
 
   .post, .last-post {
-    width: 700px;
+
+    max-width: 700px;
+    min-width: 440px;
 	margin-bottom: 20px;
 	position: relative;
 	&__header {
@@ -221,6 +223,8 @@ a:active{
 
   .post, .last-post {
     width: 280px;
+    min-width: auto;
+    max-width: auto;
 	margin-bottom: 20px;
 	position: relative;
 	&__header {

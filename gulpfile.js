@@ -13,14 +13,20 @@ var path = {
         pages: './src/pages/**/*.hbs',
         partials: './src/partials/'
     },
+    templates: 'src/partials/includes/*.hbs',
     favicons: 'src/favicons/*',
     images: 'src/**/images/*',
     fonts: 'src/fonts/*',
+    mock: 'src/mockapi/*.json',
+    scripts: 'src/scripts/*.js',
     dist: {
       css:  './dist/',
       fonts: 'dist/fonts/',
       images: './dist/',
-      html: './dist/'
+      html: './dist/',
+      templates: './dist/partials/includes',
+      mock: './dist/mockapi',
+      scripts: './dist/scripts'
     },
     watch: {
         css: './src/**/*.scss',
@@ -63,12 +69,30 @@ gulp.task('html', function () {
         .pipe(gulp.dest(path.dist.html));
 });
 
-gulp.task('build', ['html', 'css', 'images', 'fonts']);
+gulp.task('templates', function () {
+  return gulp.src(path.templates)
+  .pipe(gulp.dest(path.dist.templates));
+});
+
+gulp.task('mock', function () {
+  return gulp.src(path.mock)
+    .pipe(gulp.dest(path.dist.mock));
+});
+
+gulp.task('scripts', function () {
+  return gulp.src(path.scripts)
+    .pipe(gulp.dest(path.dist.scripts));
+});
+
+gulp.task('build', ['html', 'css', 'images', 'fonts', 'templates', 'mock', 'scripts']);
 
 gulp.task('watch', function () {
   gulp.watch(path.watch.css, ['css']);
   gulp.watch(path.fonts, ['fonts']);
   gulp.watch(path.images, ['images']);
+  gulp.watch(path.scripts, ['scripts']);
+  gulp.watch(path.mock, ['mock']);
+  gulp.watch(path.templates, ['templates']);
   gulp.watch(path.watch.html, ['html']);
 });
 

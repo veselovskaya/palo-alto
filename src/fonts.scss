@@ -21,3 +21,9 @@
     src: url('./fonts/Lato-Italic.eot');
     src: local('Lato-Italic'), url('./fonts/Lato-Italic.woff') format('woff'), url('./fonts/Lato-Italic.ttf') format('truetype');
 }
+
+@font-face {
+    font-family: 'Lato-Light';
+    src: url('./fonts/Lato-Light.eot');
+    src: local('Lato-Light'), url('./fonts/Lato-Light.woff') format('woff'), url('./fonts/Lato-Light.ttf') format('truetype');
+}

@@ -2,24 +2,30 @@
 	width: auto;
 	height: 187px;
 	background-color: $bg-color;
-	min-width: 1020px;
-
+	min-width: 768px;
 	&__container{
 	font-family: $font-bold;
 	font-size: 42px;
 	color: #333333;
 	margin: 0 auto;
-	width: 952px;
+	min-width: 768px;
+	max-width: 952px;
+	padding: 0 20px 0 20px;
 	line-height: 187px;
 	}
 
 	&__mobile-menu {
 		display: none;
 	}
-	
+
+	&__menu-icon {
+		display: none;
+		cursor: pointer;
+	}
+
 	&__menu{
 	list-style-type: none;
-	float: right;	
+	float: right;
 	margin-top: -7px;
 		li{
 		display: inline;
@@ -42,10 +48,10 @@
 @media (max-width: 768px) {
 
 	.header {
-		width: 768px;
-		min-width: auto;
+		min-width: 440px;
 		&__container {
-			width: 700px;
+			padding: 0 20px 0 20px;
+			min-width: 440px;
 		}
 
 	}
@@ -56,10 +62,12 @@
 @media (max-width: 320px) {
 
 	.header {
+		padding: 0;
 		width: 320px;
 		min-width: auto;
 		&__container {
 			width: 280px;
+			min-width: auto;
 			text-align: right;
 		}
 
@@ -70,13 +78,17 @@
 		&__logo {
 			display: block;
 			float: left;
-			
+
 
 
 		}
 
 		&__mobile-menu {
 			display: inline;
+		}
+
+		&__menu-icon {
+			display: block;
 		}
 	}
 

@@ -11,11 +11,38 @@
 	<title>Palo Alto</title>
 </head>
 <body>
+    <div class="slide-menu">
+
+			<div>
+				<input class="slide-menu__search" type="text" name="search" placeholder="SEARCH">
+			</div>
+			<div class="slide-menu__divider"></div>
+			<div>
+				<ul  class = "slide-menu__menu">
+					<li><a href="/index.html">home</a></li>
+					<li><a href="/profile.html">profile</a></li>
+				</ul>
+			</div>
+
+			<div class="slide-menu__footer">
+				<div class="slide-menu__logo-footer"><img srcset="partials/layout/images/slide-menu-footer-logo.png 1x, /partials/layout/images/slide-menu-footer-logo@2x.png 2x" /></div>
+
+				<div class="slide-menu__copyright">
+					Designed & Developed by
+					PixelBuddha Team
+				</div>
+			</div>
+
+
+	</div>
 	{{> includes/header/header}}
 
     {{#> main-block}}
     {{/main-block}}
 
 	{{> includes/footer/footer}}
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+	<script src="./scripts/scripts.js"></script>
 </body>
 </html>

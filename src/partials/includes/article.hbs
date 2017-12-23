@@ -1,0 +1,29 @@
+<section class="post">
+  {{#if image}}
+  <img class = "post__images" srcset="{{image}}" />
+  {{/if}}
+  <div class = "post__header">
+    <div class = "post__header-category">
+      {{category}}
+    </div>
+    <p class="post__header-date">{{date}}</p>
+    <p class="post__header-header">{{title}}</p>
+  </div>
+  <div class = "post__divider"></div>
+  <div class="post__text">
+
+      {{{text}}}
+
+  </div>
+  <div class = "post__bottom-container">
+    <div>
+      <button class="post__read-more" type="button">read more
+      </button>
+    </div>
+    <div class = "post__tags">
+      {{#each tags}}
+        <a href="#">{{this}}</a>
+      {{/each}}
+    </div>
+  </div>
+</section>
