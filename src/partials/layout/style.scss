@@ -15,6 +15,7 @@ body {
 
 }
 
+
 .slide-menu {
   background-color: #252b4d;
   //overflow: scroll;
@@ -87,6 +88,17 @@ body {
   cursor: pointer;
 }
 
+.overlay{
+	display: none;
+	cursor: pointer;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	right: 0;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: 1000;
+}
+
 @media only screen and (min-device-pixel-ratio: 1.5) {
 	.side-menu {
 	  	&__search {
@@ -150,3 +162,4 @@ input:focus{
 	}
 
 }
+

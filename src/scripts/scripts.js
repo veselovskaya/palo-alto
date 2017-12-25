@@ -28,19 +28,8 @@ $(document).ready(function () {
 }
 
 $('.header__menu-icon').click(function() {
-  if($(this).hasClass("clicked")) {
-    $(this).removeClass("clicked");
-    $('.slide-menu').animate({
-      right: "-240px"
-    }, 200);
+  
 
-    $('body').animate({
-      right: "0px"
-    }, 200);
-
-  }
-  else {
-    $(this).addClass("clicked");
     $('.slide-menu').animate({
       right: "0px"
     }, 200);
@@ -48,6 +37,29 @@ $('.header__menu-icon').click(function() {
     $('body').animate({
       right: "240px"
     }, 200);
-  }
+
+    $('.overlay').animate({
+      right: "240px"
+    }, 200);
+
+    $('.overlay').show();
+
   });
+
+  $('.overlay').click(function(){
+
+      $('.slide-menu').animate({
+        right: "-240px"
+      }, 200);
+
+      $('body').animate({
+        right: "0px"
+      }, 200);
+
+      $('.overlay').css({right: "0px"});
+      $('.overlay').hide();
+
+    })
+  
+
 });
